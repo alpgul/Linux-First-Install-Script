@@ -8,6 +8,7 @@ else
 	echo "Must be run as root user!!" 
 	exit 1 
 fi
+#sudo adduser qbtuser
 sudo apt-get install qbittorrent-nox -y
 cat <<EOF >> /etc/systemd/system/qbittorrent.service
 [Unit]
