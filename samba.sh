@@ -1,6 +1,13 @@
 #!/bin/bash
 # Samba Server
 
+if [ $SUDO_USER ]; 
+then 
+	user=$SUDO_USER;echo 
+else 
+	echo "Must be run as root user!!" 
+	exit 1 
+fi
 sudo apt-get install samba samba-common-bin
 sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.old
 sudo sed -i  '/\[global\]/a server string = File Server' /etc/samba/smb.conf
