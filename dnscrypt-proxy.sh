@@ -1,4 +1,12 @@
-
+#!/bin/bash
+# dnscrypt Server
+if [ $SUDO_USER ]; 
+then 
+	user=$SUDO_USER;echo 
+else 
+	echo "Must be run as root user!!" 
+	exit 1 
+fi
 cd /tmp
 wget https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_arm-2.0.16.tar.gz
 sudo chmod +x dnscrypt-proxy-linux_arm-2.0.16.tar.gz
