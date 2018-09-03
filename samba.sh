@@ -46,12 +46,6 @@ browsable = yes
 guest ok = no
 writable = yes
 EOF
-sudo smbpasswd -a root<<EOF
-root
-root
-EOF
-sudo smbpasswd -a pi<<EOF
-raspberry
-raspberry
-EOF
+#sudo smbpasswd -a root
+#sudo smbpasswd -a pi
 sudo service smbd restart
