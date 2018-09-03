@@ -1,5 +1,12 @@
 #!/bin/bash
 # Raspberry Monitor
+if [ $SUDO_USER ]; 
+then 
+	user=$SUDO_USER;echo 
+else 
+	echo "Must be run as root user!!" 
+	exit 1 
+fi
 cd /tmp
 sudo wget https://goo.gl/yDYFhy -O rpimonitor_latest.deb
 sudo chmod +x rpimonitor_latest.deb
