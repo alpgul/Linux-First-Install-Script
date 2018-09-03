@@ -10,7 +10,7 @@ fi
 cd /tmp
 sudo wget https://goo.gl/yDYFhy -O rpimonitor_latest.deb
 sudo chmod +x rpimonitor_latest.deb
-sudo aptitude install librrds-perl libhttp-daemon-perl libjson-perl \
+sudo aptitude -y install librrds-perl libhttp-daemon-perl libjson-perl \
 libipc-sharelite-perl libfile-which-perl libsnmp-extension-passpersist-perl
 sudo dpkg -i rpimonitor_latest.deb
 sudo /usr/share/rpimonitor/scripts/updatePackagesStatus.pl
