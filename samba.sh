@@ -13,7 +13,7 @@ sed -i  '/\[global\]/a security = user' /etc/samba/smb.conf
 mkdir /home/pi/Shares
 mkdir /home/pi/Shares/guests
 mkdir /home/pi/Shares/public
-cat <<EOF >> /etc/samba/smb.conf
+sudo cat <<EOF >> /etc/samba/smb.conf
 [Guests]
 comment = Guest Network Share
 path = /home/pi/Shares/guests
