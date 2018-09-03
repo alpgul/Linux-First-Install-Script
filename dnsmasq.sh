@@ -7,7 +7,7 @@ else
 	echo "Must be run as root user!!" 
 	exit 1 
 fi
-sudo apt-get install dnsmasq
+sudo apt-get install dnsmasq -y
 cat <<EOF >> /etc/dnsmasq.conf
 interface=lo,ap0
 no-dhcp-interface=lo,wlan0
