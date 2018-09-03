@@ -23,3 +23,4 @@
 * 8.2-pulseaudio fix
 * 9- Plex Server
 * 9.1- Plex [Trailer](https://github.com/piplongrun/TrailerAddict.bundle) Plugin add 
+* 10. Emby Server
