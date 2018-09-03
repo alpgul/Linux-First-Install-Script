@@ -8,12 +8,11 @@ else
 	exit 1 
 fi
 cd /tmp
-sudo wget https://goo.gl/yDYFhy -O rpimonitor_latest.deb
-sudo chmod +x rpimonitor_latest.deb
-sudo aptitude -y install librrds-perl libhttp-daemon-perl libjson-perl \
-libipc-sharelite-perl libfile-which-perl libsnmp-extension-passpersist-perl
-sudo dpkg -i rpimonitor_latest.deb
-sudo /usr/share/rpimonitor/scripts/updatePackagesStatus.pl
+sudo apt-get install dirmngr
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2C0D3C0F
+sudo wget http://goo.gl/vewCLL -O /etc/apt/sources.list.d/rpimonitor.list
+sudo apt-get update
+sudo apt-get install rpimonitor
 sudo sed -i  "s#\#include=/etc/rpimonitor/template/services.conf#include=/etc/rpimonitor/template/services.conf#g" /etc/rpimonitor/data.conf
 sudo sed -i  "s#\#include=/etc/rpimonitor/template/wlan.conf#include=/etc/rpimonitor/template/wlan.conf#g" /etc/rpimonitor/data.conf
 sudo wget https://raw.githubusercontent.com/alpgul/Linux-First-Install-Script/master/RpiMonitor/Services.conf -O /etc/rpimonitor/template/services.conf
