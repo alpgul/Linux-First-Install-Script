@@ -1,5 +1,5 @@
-
-
+#!/bin/bash
+# Samba Server
 
 sudo apt-get install samba samba-common-bin
 sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.old
