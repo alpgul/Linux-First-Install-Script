@@ -1,4 +1,12 @@
-
+#!/bin/bash
+# INTANG Server
+if [ $SUDO_USER ]; 
+then 
+	user=$SUDO_USER;echo 
+else 
+	echo "Must be run as root user!!" 
+	exit 1 
+fi
 cd /opt
 sudo git clone https://github.com/alpgul/INTANG
 cd ./INTANG/
