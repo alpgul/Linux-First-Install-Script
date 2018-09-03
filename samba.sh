@@ -3,16 +3,16 @@
 
 sudo apt-get install samba samba-common-bin
 sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.old
-sed -i  '/\[global\]/a server string = File Server' /etc/samba/smb.conf
-sed -i  '/\[global\]/a security = user' /etc/samba/smb.conf
-sed -i  '/\[global\]/a encrypt passwords = true' /etc/samba/smb.conf
-sed -i  '/\[global\]/a guest account = nobody' /etc/samba/smb.conf
-sed -i  '/\[global\]/a force user = pi' /etc/samba/smb.conf
-sed -i  '/\[global\]/a force group = pi' /etc/samba/smb.conf
-sed -i  '/\[global\]/a security = user' /etc/samba/smb.conf
-mkdir /home/pi/Shares
-mkdir /home/pi/Shares/guests
-mkdir /home/pi/Shares/public
+sudo sed -i  '/\[global\]/a server string = File Server' /etc/samba/smb.conf
+sudo sudo sed -i  '/\[global\]/a security = user' /etc/samba/smb.conf
+sudo sed -i  '/\[global\]/a encrypt passwords = true' /etc/samba/smb.conf
+sudo sed -i  '/\[global\]/a guest account = nobody' /etc/samba/smb.conf
+sudo sed -i  '/\[global\]/a force user = pi' /etc/samba/smb.conf
+sudo sed -i  '/\[global\]/a force group = pi' /etc/samba/smb.conf
+sudo sed -i  '/\[global\]/a security = user' /etc/samba/smb.conf
+sudo mkdir /home/pi/Shares
+sudo mkdir /home/pi/Shares/guests
+sudo mkdir /home/pi/Shares/public
 sudo cat <<EOF >> /etc/samba/smb.conf
 [Guests]
 comment = Guest Network Share
