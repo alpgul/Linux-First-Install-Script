@@ -1,4 +1,12 @@
-
+#!/bin/bash
+# Hotspot Server
+if [ $SUDO_USER ]; 
+then 
+	user=$SUDO_USER;echo 
+else 
+	echo "Must be run as root user!!" 
+	exit 1 
+fi
 cat > /etc/systemd/network/08-wlan0.network <<EOF
 [Match]
 Name=wlan0
