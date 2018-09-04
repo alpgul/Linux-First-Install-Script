@@ -1,0 +1,2 @@
+[Service]
+ExecStartPre=/sbin/iw dev wlan0 interface add ap0 type __ap
